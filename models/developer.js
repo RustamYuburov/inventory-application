@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const DeveloperSchema = new Schema({
   name: { type: String, required: true, minLength: 2, maxLength: 100 },
   description: { type: String, required: true, minLength: 1, maxLength: 2000 },
-  studioImage: { type: String },
+  // studioImage: { type: String },
 });
 
 DeveloperSchema.virtual('url').get(function () {

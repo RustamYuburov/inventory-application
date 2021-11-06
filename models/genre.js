@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const GenreSchema = new Schema({
   name: { type: String, required: true, minLength: 1, maxLength: 100 },
+  // genreImage: { type: String },
 });
 
 // Virtual for genre's URL

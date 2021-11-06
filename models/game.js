@@ -7,8 +7,8 @@ const GameSchema = new Schema({
   price: { type: Number, required: true, min: 0, max: 99999 },
   inStock: { type: Number, required: true, min: 0, max: 9999 },
   developer: { type: Schema.Types.ObjectId, ref: 'Developer', required: true },
-  genre: { type: Schema.Types.ObjectId, ref: 'Genre', required: true },
-  productImage: { type: String },
+  genre: [{ type: Schema.Types.ObjectId, ref: 'Genre', required: true }],
+  // productImage: { type: String },
 });
 
 GameSchema.virtual('url').get(function () {
