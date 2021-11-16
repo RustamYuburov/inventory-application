@@ -1,0 +1,147 @@
+.main-content,
+.inventory-links,
+.first-row-instructions {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* TITLE TEXT */
+
+.title, 
+.instructions {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Fredoka One', Arial, Helvetica, sans-serif;
+}
+
+.title {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+  width: 35%;
+}
+
+.title-name {
+  background-image: url(https://media2.giphy.com/media/l4KihuqeuJEi9qLSM/200w.webp?cid=ecf05e474ssyt49j3xshgf4lqdvh3mo38druiafxzt5iiabk&rid=200w.webp&ct=g);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 1.95em;
+  line-height: 1;
+}
+
+.main-content {
+  padding: 30px;
+}
+
+.main-divs {
+  text-align: center;
+}
+
+/* TITLE INSTRUCTIONS */
+
+.instructions {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+
+.inventory-links img,
+.instructions img {
+  object-fit: cover;
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.register-genre img {
+  margin-top: 15px;
+}
+
+.first-row-instructions img {
+  width: 220px;
+  padding: 10px;
+}
+
+.first-row-instructions h2,
+.register-game h2 {
+  font-size: 1.5em;
+  color: #ea3b50;
+  margin: 5px;
+}
+
+.register-game img {
+  height: 180px;
+}
+
+.inventory-links {
+  margin: 100px 15% 0 15%;
+  padding-bottom: 150px;
+}
+
+.inventory-links img {
+  height: 150px;
+  margin: 5px;
+}
+
+.button-links {
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 20px 15px;
+  perspective: 1000px;
+}
+
+.button-links p {
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform 0.25s;
+  font-family: 'Poppins', sans-serif;
+}
+.button-links p:before,
+.button-links p:after {
+  position: absolute;
+  height: 55px;
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.button-links p:before {
+  color: #fff;
+  background: #000;
+  transform: rotateY(0deg) translateZ(25px);
+}
+.button-links p:after {
+  color: #000;
+  background: #fff;
+  border: solid 4px;
+  transform: rotateX(90deg) translateZ(25px);
+}
+.button-links p:hover {
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+
+.link-gamelist p::before,
+.link-gamelist p::after {
+  content: 'Explore games';
+}
+
+.link-genrelist p::before,
+.link-genrelist p::after {
+  content: 'Explore genres';
+}
+.link-devlist p::before,
+.link-devlist p::after {
+  content: 'Explore developers';
+}

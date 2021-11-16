@@ -1,0 +1,48 @@
+footer {
+  bottom: 0;
+  width: 100%;
+  background: #d4d4d4;
+  color: black;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer a {
+  color: black;
+}
+
+.footer-div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-div a:hover {
+  text-decoration: underline;
+}
+
+.footer-links {
+  font-size: 18px;
+  padding: 5px 0;
+}
+.footer-links a,
+.footer-github a {
+  margin: 4px 0;
+}
+
+.footer-img img {
+  max-width: 200px;
+}
+
+.footer-github img {
+  max-width: 35px;
+}
+
+.footer-github p {
+  font-size: 18px;
+  margin: 5px;
+}
+
+.footer-img {
+  margin-top: 5px;
+}

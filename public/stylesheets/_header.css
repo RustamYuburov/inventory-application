@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: solid black;
+  font-size: 18px;
+  padding: 15px 0;
+  background: #4251a5;
+  position: relative;
+}
+
+.logo-name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-name h2 {
+  margin-top: 25px;
+}
+
+.logo {
+  height: 70px;
+  margin: 0 20px;
+}
+
+.sign-up {
+  margin-right: 150px;
+}
+
+.sign-up li {
+  margin: 5px;
+  padding: 5px 0;
+  list-style: none;
+  transition: 0.2s ease-out;
+}
+
+.sign-up li:hover {
+  box-shadow: inset 0 -5px 0 #ea3b50;
+}
+
+/* NAVIGATION BAR */
+
+nav {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  width: 150px;
+  background: #d9d9d9;
+  margin: 10px auto;
+}
+
+.menu-span {
+  padding: 13px;
+  background: #102235;
+  color: white;
+  font-size: 18px;
+  font-variant: small-caps;
+  cursor: pointer;
+  display: block;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.menu-span::after {
+  float: right;
+  right: 10%;
+}
+
+.menu-span:hover {
+  box-shadow: inset 0 5px #ea3b50;
+}
+
+.slide {
+  clear: both;
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+  text-align: center;
+  transition: height 0.4s ease;
+  background: #102235;
+}
+
+.slide li {
+  padding: 5px;
+}
+
+#touch {
+  position: absolute;
+  opacity: 0;
+  height: 0px;
+}
+
+#touch:checked + .slide {
+  height: 130px;
+}

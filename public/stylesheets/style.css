@@ -1,8 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Niconne&display=swap');
+@import "_header.css";
+@import "_footer.css";
+@import "_index.css";
+
+/* ROOT */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header,
+footer {
+  font-family: 'Comfortaa', Courier, monospace;
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+}
+
+main {
+  background-color: #d4d4d4;
 }
 
 a {
-  color: #00B7FF;
+  color: white;
+  text-decoration: none;
 }
