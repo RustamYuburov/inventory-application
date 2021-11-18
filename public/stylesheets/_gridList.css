@@ -1,0 +1,107 @@
+.grid {
+  /* width: 70%; */
+  /* border: solid; */
+  margin-top: 30px;
+  padding: 0 15% 100px 15%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 800px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+.GridDiv {
+  /* border: solid; */
+  margin: 20px 20px 0 20px;
+  width: fit-content;
+
+  box-sizing: border-box;
+  /* font-size: 20px; */
+  /* padding: 0.5rem; */
+  transition: 300ms;
+  /* max-width: 250px; */
+  height: fit-content;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-right-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  cursor: pointer;
+  position: relative;
+  /* @include flex-center;
+  flex-direction: column; */
+}
+
+.GridDiv:hover {
+  transform: scale(1.07);
+}
+.GridDiv:active {
+  background: rgba(255, 255, 255, 0.4);
+  transition: 400ms;
+}
+
+.GridDiv img {
+  width: 200px;
+}
+
+.list-title {
+  font-family: 'Comfortaa', Courier, monospace;
+  text-transform: capitalize;
+  color: black;
+  padding: 20px 20px 0 20px;
+}
+
+.GridDiv h3 {
+  font-family: 'Comfortaa', Courier, monospace;
+  color: black;
+  margin: 10px 10px 0 10px;
+}
+
+/* BUTTONS */
+
+.btn-div {
+  /* border: black solid; */
+  /* margin-top: 20px; */
+  padding: 25px 0;
+}
+
+.btn {
+  /* color: #FFF; */
+  background-color: transparent;
+  border: 3px solid;
+  color: #0258d8;
+  border-radius: 0px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+  font-family: "Josefin Sans", Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px 30px;
+  /* border-color: #02d891;
+  box-shadow: inset 0 0 0 0 #02d891; */
+  border-color: #0258d8;
+  box-shadow: inset 0 0 0 0 #0258d8;
+}
+
+.btn:hover {
+  color: white;
+  box-shadow: inset 400px 0 0 0 #0258d8;
+}
