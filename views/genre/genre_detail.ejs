@@ -1,0 +1,26 @@
+<main>
+  <h1 class="genre_title_h1">All <%= title %></h1>
+  <hr />
+
+  <div class="genre_list">
+    <% genre_games.forEach(game => { %>
+      
+      <a href=<%=game.url %>>
+        <div class="genre_game_info">
+
+          <div class="genre_game_title">
+            <h3><%= game.title %></h3>
+          </div>
+          
+          <% if (game.productImage) { %>
+          <img src="<%=game.productImage %>" alt="Game image" />
+          <% } else { %>
+          <img src="/images/games-list.jpg" alt="Game image placeholder" />
+          <% } %>
+
+        </div>
+      </a>
+    <% }) %>
+  </div>
+
+</main>
