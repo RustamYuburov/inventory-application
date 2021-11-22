@@ -1,0 +1,29 @@
+<main>
+  <div class="btn-div">
+    <a href="/game/create">
+      <button class="btn add-msg-btn">ADD NEW GAME</button>
+    </a>
+  </div>
+  <hr />
+
+  <h1 class="list-title">Explore all <%= title %></h1>
+
+  <div class="grid">
+    <% game_list.forEach(game => { %>
+
+    <div class="GridDiv">
+      
+      <a href=<%=game.url %>>
+        <% if (game.productImage) { %>
+        <img src="<%=game.productImage %>" alt="Game image" />
+        <% } else { %>
+        <img src="/images/games-list.jpg" alt="Game image placeholder" />
+        <% } %>
+
+        <h3><%= game.title %></h3>
+      </a>
+    </div>
+    <% }) %>
+  </div>
+
+</main>
