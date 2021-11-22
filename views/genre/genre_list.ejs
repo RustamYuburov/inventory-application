@@ -1,0 +1,29 @@
+<main>
+  <div class="btn-div">
+    <a href="/genre/create">
+      <button class="btn add-msg-btn">ADD NEW GENRE</button>
+    </a>
+  </div>
+  <hr />
+
+  <h1 class="list-title">Explore all <%= title %></h1>
+
+  <div class="grid">
+    <% genre_list.forEach(genre => { %>
+      
+    <div class="GridDiv">
+      <a href=<%=genre.url %>>
+        
+        <% if (genre.genreImage) { %>
+        <img src="<%=genre.genreImage %>" alt="Genre image" />
+        <% } else { %>
+        <img src="images/genres-list.jpg" alt="Genre image placeholder" />
+        <% } %>
+
+        <h3><%= genre.name %></h3>
+      </a>
+    </div>
+    <% }) %>
+  </div>
+
+</main>
