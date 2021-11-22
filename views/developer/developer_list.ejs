@@ -1,0 +1,27 @@
+<main>
+  <div class="btn-div">
+    <a href="/developer/create">
+      <button class="btn add-msg-btn">ADD NEW DEVELOPER</button>
+    </a>
+  </div>
+  <hr />
+
+  <h1 class="list-title">Explore all <%= title %></h1>
+
+  <div class="grid">
+    <% dev_list.forEach(developer => { %>
+    <div class="GridDiv">
+      <a href=<%=developer.url %>>
+        <% if (developer.studioImage) { %>
+        <img src="<%=developer.studioImage %>" alt="Developer image" />
+        <% } else { %>
+        <img src="/images/devs-list.png" alt="Developer image placeholder" />
+        <% } %>
+
+        <h3><%= developer.name %></h3>
+      </a>
+    </div>
+    <% }) %>
+  </div>
+
+</main>
