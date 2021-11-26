@@ -1,0 +1,35 @@
+<main>
+  <div class="detail-div">
+    <div class="detailInfo">
+      <h1><%= title %></h1>
+      <h2><%= developer.description %></h2>
+
+      <h2>List of games:</h2>
+
+      <ul class="dev-list-game">
+        <% developer_games.forEach(game => { %>
+        <a href="<%=game.url%>">
+          <li><h2><%= game.title%></h2></li>
+        </a>
+        <% }); %>
+      </ul>
+
+    </div>
+    <div class="detailImage">
+      <% if (developer.studioImage) { %>
+      <img src="<%=developer.studioImage %>" alt="Developer image" />
+      <% } else { %>
+      <img src="/images/devs-list.png" alt="Developer image placeholder" />
+      <% } %>
+
+      <div class="gameEditButton">
+        <a href="<%= developer.url %>/update">
+          <button class="btn">Update Developer</button>
+        </a>
+        <a href="<%= developer.url %>/delete">
+          <button class="btn">Delete Developer</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</main>
