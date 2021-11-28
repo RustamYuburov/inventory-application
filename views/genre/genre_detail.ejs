@@ -3,24 +3,32 @@
   <hr />
 
   <div class="genre_list">
-    <% genre_games.forEach(game => { %>
-      
-      <a href=<%=game.url %>>
-        <div class="genre_game_info">
 
-          <div class="genre_game_title">
-            <h3><%= game.title %></h3>
+    <% if (genre_games.length == 0) { %>
+      <h2>There are no games in this genre</h2>
+    <% } else { %>
+
+      <% genre_games.forEach(game => { %>
+        
+        <a href=<%=game.url %>>
+          <div class="genre_game_info">
+
+            <div class="genre_game_title">
+              <h3><%= game.title %></h3>
+            </div>
+            
+            <% if (game.productImage) { %>
+            <img src="<%=game.productImage %>" alt="Game image" />
+            <% } else { %>
+            <img src="/images/games-list.jpg" alt="Game image placeholder" />
+            <% } %>
+
           </div>
-          
-          <% if (game.productImage) { %>
-          <img src="<%=game.productImage %>" alt="Game image" />
-          <% } else { %>
-          <img src="/images/games-list.jpg" alt="Game image placeholder" />
-          <% } %>
+        </a>
 
-        </div>
-      </a>
-    <% }) %>
+      <% }) %>
+
+    <% } %>
   </div>
 
   <div class="btn-div">
