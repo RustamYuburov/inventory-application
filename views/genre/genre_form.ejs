@@ -1,0 +1,55 @@
+<main>
+  <div class="forms">
+    
+    <h1><%= title%></h1>
+    <hr />
+
+    <div class="formDiv">
+      <form action="" method="POST" enctype="multipart/form-data">
+
+        <label for="name">Genre Name</label>
+        <input 
+          type="text"
+          id="name"
+          placeholder="Please enter genre name"
+          name="name"
+          required="true"
+          value=<%= (locals.genre) ? locals.genre.name : "" %> 
+        >
+        <% if (type == 'update') { %>
+          <label for="password">Admin Password</label>
+          <input 
+            type="password"
+            id="password"
+            placeholder="Please enter password"
+            name="password"
+            required="true"
+          >
+        <% } %>
+        <label for="genre_image">Genre Image</label>
+        <input 
+          type="file"
+          id="genre_image"
+          name="genre_image"
+        >
+        <button class="btn" type="submit">Submit</button>
+      </form>
+    </div>
+    
+    <div class="errors-list">
+      <% if (typeof errors != 'undefined') { %>
+        <ul class="">
+          <% errors.forEach(error => { %>
+          <li><h2><%= error.msg %></h2></li>
+          <% }); %>
+        </ul>
+        <% } %> 
+
+      <% if (typeof error != 'undefined') { %>
+      <ul class="">
+        <li><h2><%= error%></h2></li>
+      </ul>
+      <% } %>
+    </div>
+  </div>
+</main>
