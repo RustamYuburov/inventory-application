@@ -9,21 +9,28 @@
   <h1 class="list-title">Explore all <%= title %></h1>
 
   <div class="grid">
-    <% genre_list.forEach(genre => { %>
-      
-    <div class="GridDiv">
-      <a href=<%=genre.url %>>
-        
-        <% if (genre.genreImage) { %>
-        <img src="<%=genre.genreImage %>" alt="Genre image" />
-        <% } else { %>
-        <img src="images/genres-list.jpg" alt="Genre image placeholder" />
-        <% } %>
+    <% if (genre_games.length == 0) { %>
+      <h2>There are no genres :( <br>
+          Please add some</h2>
+      <img class="not-found" src="/images/not-found.png" alt="Not found">
+    <% } else { %>
 
-        <h3><%= genre.name %></h3>
-      </a>
-    </div>
-    <% }) %>
+      <% genre_list.forEach(genre => { %>
+        
+      <div class="GridDiv">
+        <a href=<%=genre.url %>>
+          
+          <% if (genre.genreImage) { %>
+          <img src="<%=genre.genreImage %>" alt="Genre image" />
+          <% } else { %>
+          <img src="/images/genres-list.jpg" alt="Genre image placeholder" />
+          <% } %>
+
+          <h3><%= genre.name %></h3>
+        </a>
+      </div>
+      <% }) %>
+    <% } %>
   </div>
 
 </main>
