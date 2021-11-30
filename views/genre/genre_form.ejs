@@ -16,6 +16,7 @@
           required="true"
           value=<%= (locals.genre) ? locals.genre.name : "" %> 
         >
+
         <% if (type == 'update') { %>
           <label for="password">Admin Password</label>
           <input 
@@ -26,12 +27,14 @@
             required="true"
           >
         <% } %>
+
         <label for="genre_image">Genre Image</label>
         <input 
           type="file"
           id="genre_image"
           name="genre_image"
         >
+        
         <button class="btn" type="submit">Submit</button>
       </form>
     </div>
