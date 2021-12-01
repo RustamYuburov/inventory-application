@@ -14,7 +14,7 @@
           placeholder="Please enter genre name"
           name="name"
           required="true"
-          value=<%= (locals.genre) ? locals.genre.name : "" %> 
+          value=<%= typeof genre != 'undefined' ? genre.name : "" %> 
         >
 
         <% if (type == 'update') { %>
