@@ -8,11 +8,11 @@ const GameSchema = new Schema({
   inStock: { type: Number, required: true, min: 0, max: 9999 },
   developer: { type: Schema.Types.ObjectId, ref: 'Developer', required: true },
   genre: [{ type: Schema.Types.ObjectId, ref: 'Genre', required: true }],
-  // productImage: { type: String },
+  productImage: { type: String },
 });
 
 GameSchema.virtual('url').get(function () {
-  return '/catalog/game/' + this._id;
+  return '/game/' + this._id;
 });
 
 module.exports = mongoose.model('Game', GameSchema);
