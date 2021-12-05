@@ -1,0 +1,192 @@
+/* ALL formsS */
+.delete-form,
+.forms,
+.genres-options {
+  display: flex;
+  flex-direction: column; 
+}
+
+.delete-inputs,
+.formDiv {
+  width: 50%;
+  margin: 30px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px #00000060;
+}
+
+.delete-inputs,
+.formDiv form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.delete-form h1,
+.forms h1 {
+  font-family: 'Bebas Neue', Courier, monospace;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.forms h1 {
+  margin: 20px;
+}
+
+.formDiv textarea {
+  height: 250px;
+}
+
+.delete-inputs label,
+.delete-inputs input,
+.formDiv textarea,
+.formDiv label,
+.formDiv input {
+  margin: 20px;
+}
+
+.delete-inputs label,
+.formDiv label {
+  font-size: 1.8em;
+  font-family: 'Fredoka One', Courier, monospace;
+  font-weight: 600;
+}
+
+.genres-options,
+.delete-inputs input,
+.formDiv input,
+.formDiv select,
+.formDiv textarea {
+  font-size: 1.3em;
+  font-weight: 600;
+  width: 80%;
+  margin: auto;
+  padding: 10px 15px;
+  border-radius: 6px;
+  outline: none;
+  border: solid black 2px;
+  background-color: rgb(184, 189, 196);
+  font-family: 'Comfortaa', Courier, monospace;
+}
+
+.delete-inputs input,
+.formDiv input:focus,
+.formDiv textarea:focus {
+  background-color: rgb(184, 189, 196);
+  border: solid rgb(6, 52, 202) 2.4px;
+  transition: ease 0.2s;
+}
+
+::placeholder {
+  color: rgba(31, 32, 34, 0.795);
+}
+
+
+.delete-inputs button,
+.formDiv button {
+  width: 30%;
+  margin: 30px auto;
+  padding: 10px;
+}
+
+.errors-list {
+  color: red;
+}
+
+#description {
+  height: 250px;
+}
+
+.delete-form h2 {
+  font-family: 'Comfortaa', Courier, monospace;
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.delete-form h3 {
+  font-size: 1.6rem;
+}
+
+
+/* GENRE forms */
+.genres-options {
+  font-size: 0.7em;
+  padding: 10px 10%;
+}
+
+.formDiv option,
+.genres-options label {
+  font-family: 'Comfortaa', Courier, monospace;
+  margin: 5px;
+}
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+  border: solid blue;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container:hover input ~ .checkmark:after {
+  left: 5px;
+  top: 1.5px;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 8px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

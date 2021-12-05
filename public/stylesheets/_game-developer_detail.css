@@ -1,0 +1,93 @@
+
+.detail-div{
+  min-height: 500px;
+  margin: 0 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.detailInfo,
+.detailImage {
+  margin: 30px;
+}
+
+.detailInfo {
+  text-align: left;
+  align-self: center;
+}
+
+.detailInfo a {
+  color: blue;
+  margin: 0 2px;
+  
+}
+.detailInfo a:hover {
+  text-decoration: underline;
+}
+
+.detailInfo h1 {
+  margin: 15px 10px;
+}
+
+.detailInfo h1 {
+  font-family: 'Bebas Neue', Courier, monospace;
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+.detailInfo h2 {
+  font-family: 'Comfortaa', Courier, monospace;
+  font-size: 1.5em;
+}
+
+.detailInfo h3 {
+  font-family: 'Fredoka One', Courier, monospace;
+  font-size: 1.8em;
+  margin: 10px;
+  color: red;
+}
+
+.detailImage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+
+.detailImage img {
+  max-height: 300px;
+  max-width: 420px;
+  padding: 5px;
+  box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
+}
+
+.detailImage button {
+  padding: 10px;
+  margin: 0 10px;
+  font-size: 1em;
+}
+
+
+.detailInfo ul {
+  margin: -15px 0 0 25px;
+}
+
+.detailInfo h2 {
+  margin: 20px 10px ;
+}
+
+.dev-list-game h2 {
+  margin: 1px;
+}
+
+.detailInfo li {
+  padding: 0px;
+  margin: 0%;
+  height: fit-content;
+}
+
+.not-found {
+  max-height: 150px;
+  max-width: 150px;
+  margin-left: 15px;
+}
