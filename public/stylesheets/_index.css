@@ -23,12 +23,12 @@
 }
 
 .title-name {
-  background-image: url(https://media2.giphy.com/media/l4KihuqeuJEi9qLSM/200w.webp?cid=ecf05e474ssyt49j3xshgf4lqdvh3mo38druiafxzt5iiabk&rid=200w.webp&ct=g);
+  background-image: url('/images/genre-game-background.jpg');
   background-size: cover;
   color: transparent;
   -moz-background-clip: text;
   -webkit-background-clip: text;
-  font-size: 1.95em;
+  font-size: 2.25em;
   line-height: 1;
 }
 
