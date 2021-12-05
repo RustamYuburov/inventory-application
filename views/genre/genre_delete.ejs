@@ -1,0 +1,39 @@
+<main>
+  <div class="delete-form">
+    <h1><%= title %></h1>
+    <hr>
+
+    <% if (genre_games.length > 0) { %>
+      <h2>Please delete the following games before attempting to delete this genre.</h2>
+      <div class="grid">
+        <% genre_games.forEach(game => { %>
+          <div class="GridDiv">
+            <a href=<%= game.url %> >
+              <img src="<%= game.productImage %> " alt="Game image">
+              <h3><%= game.title %></h3>
+            </a>
+          </div>
+          <% }) %>
+      </div>
+      
+    <% } else { %>
+      <div class="delete-inputs">
+        <h2>Are you sure that you want to delete this genre?</h2>
+        <form action="" method="POST">
+          <label for="password">Admin Password</label>
+          <input type="password" name="password" id="password" required placeholder="Please enter the password">
+          <input type="hidden" name="genreid" required="true" value=<%= genre._id %>>
+          <button class="btn" type="submit">Delete</button>
+        </form>
+      </div>
+      <% } %>
+
+      <div class="errors-list">
+        <% if (typeof error != 'undefined') { %>
+          <ul class="">
+            <li><h2><%= error%></h2></li>
+          </ul>
+          <% } %>
+        </div>
+  </div>
+</main>

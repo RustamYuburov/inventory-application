@@ -14,11 +14,11 @@
           placeholder="Please enter genre name"
           name="name"
           required="true"
-          value=<%= typeof genre != 'undefined' ? genre.name : "" %> 
+          value="<%= typeof genre != 'undefined' ? genre.name : "" %>"
         >
 
         <% if (type == 'update') { %>
-          <label for="password">Admin Password</label>
+          <label for="password">Admin password is needed to update game info</label>
           <input 
             type="password"
             id="password"
@@ -51,6 +51,12 @@
       <% if (typeof error != 'undefined') { %>
       <ul class="">
         <li><h2><%= error%></h2></li>
+      </ul>
+      <% } %> 
+
+      <% if (typeof msg != 'undefined') { %>
+      <ul class="">
+        <li><h2><%= msg%></h2></li>
       </ul>
       <% } %>
     </div>
