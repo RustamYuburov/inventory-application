@@ -21,7 +21,7 @@
         <h2>Are you sure that you want to delete this developer?</h2>
         <form action="" method="POST">
           <label for="password">Admin Password</label>
-          <input type="password" name="password" id="password" placeholder="Please enter the password">
+          <input type="password" name="password" id="password" required placeholder="Please enter the password">
           <input type="hidden" name="developerid" required="true" value=<%= developer._id %>>
           <button class="btn" type="submit">Delete</button>
         </form>

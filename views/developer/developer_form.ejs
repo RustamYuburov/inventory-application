@@ -1,0 +1,73 @@
+<main>
+  <div class="forms">
+    
+    <h1><%= title%></h1>
+    <hr />
+
+    <div class="formDiv">
+      <form action="" method="POST" enctype="multipart/form-data">
+
+        <label for="name">Developer Name</label>
+        <input 
+          type="text"
+          id="name"
+          placeholder="Please enter developer name"
+          name="name"
+          required="true"
+          value="<%= (typeof developer != 'undefined') ? developer.name : "" %>"
+        >
+
+        <label for="description">Developer Description</label>
+        <textarea 
+          type="text"
+          id="description"
+          placeholder="Please enter developer description"
+          name="description"
+          required="true"
+        ><%= (typeof developer != 'undefined') ? developer.description : "" %></textarea>
+
+        <% if (type == 'update') { %>
+          <label for="password">Admin password is needed to update developer info</label>
+          <input 
+            type="password"
+            id="password"
+            placeholder="Please enter password"
+            name="password"
+            required="true"
+          >
+        <% } %>
+
+        <label for="developer_image">Developer Image</label>
+        <input 
+          type="file"
+          id="developer_image"
+          name="developer_image"
+        >
+        
+        <button class="btn" type="submit">Submit</button>
+      </form>
+    </div>
+    
+    <div class="errors-list">
+      <% if (typeof errors != 'undefined') { %>
+        <ul class="">
+          <% errors.forEach(error => { %>
+          <li><h2><%= error.msg %></h2></li>
+          <% }); %>
+        </ul>
+        <% } %> 
+
+      <% if (typeof error != 'undefined') { %>
+      <ul class="">
+        <li><h2><%= error%></h2></li>
+      </ul>
+      <% } %>
+      
+      <% if (typeof msg != 'undefined') { %>
+      <ul class="">
+        <li><h2><%= msg%></h2></li>
+      </ul>
+      <% } %>
+    </div>
+  </div>
+</main>
