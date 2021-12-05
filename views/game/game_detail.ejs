@@ -1,0 +1,48 @@
+<main>
+  <div class="detail-div">
+    <div class="detailInfo">
+      <h1><%= title %></h1>
+      <h2><%= game.summary %></h2>
+      <h2>Developed by: <a href=<%=game.developer.url %>><%= game.developer.name %></a></h2>
+
+      <h2>
+        <% if (game.genre.length == 0) { %>
+          <h3>There are no genres added :( <br>
+              Please update game and add genre</h3>
+        <% } else { %>
+          Genres:
+          <% game.genre.forEach(genre => { %>
+            <a href="<%=genre.url%>">
+              <%= genre.name%>, 
+            </a>
+          <% }); %> 
+        <% } %>
+      </h2>
+
+      <h2>Price: <%= game.price %>$</h2>
+      <% if (game.inStock == 0) { %>
+        <h2>Out of Stock</h2>
+      <% } else { %>
+        <h2>In stock: <%= game.inStock %></h2>
+      <% } %>
+
+    </div>
+    <div class="detailImage">
+      
+      <% if (game.productImage) { %>
+        <img src="<%=game.productImage %>" alt="Game image" />
+      <% } else { %>
+        <img src="/images/games-list.jpg" alt="Game image placeholder" />
+      <% } %>
+        
+      <div class="editButton">
+        <a href="<%= game.url %>/update">
+          <button class="btn">Update Game</button>
+        </a>
+        <a href="<%= game.url %>/delete">
+          <button class="btn">Delete Game</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,121 @@
+<main>
+  <div class="forms">
+    
+    <h1><%= title%></h1>
+    <hr />
+
+    <div class="formDiv">
+      <form action="" method="POST" enctype="multipart/form-data">
+
+        <label for="name">Game Title</label>
+        <input 
+          type="text"
+          id="title"
+          placeholder="Please enter game title"
+          name="title"
+          required="true"
+          value="<%= typeof game != 'undefined' ? game.title : '' %>"
+        >
+        
+        <label for="summary">Game Summary</label>
+        <textarea 
+        type="textarea"
+        id="summary"
+        placeholder="Please enter game summary"
+        name="summary"
+        required="true"
+        value=""
+        ><%= (typeof game != 'undefined') ? game.summary : '' %></textarea>
+
+        
+        
+        <label for="developer">Game Developer</label>
+        <select name="developer" id="developer" required='true'>
+          <!-- <option value="none" selected disabled hidden>Select your Developer</option> -->
+          <% developers.forEach(developer => { %>
+            <% if (typeof game != 'undefined') { %>
+              <% var selected = developer._id.toString() === game.developer._id.toString() ? 'selected' : false %>
+              <option  value="<%=developer._id %>" <%= selected %>> <%= developer.name %></option>
+            <% } else { %>
+              <option value="<%=developer._id %>"><%= developer.name %></option>
+            <% } %>
+          <% }) %>
+        </select>
+
+        <label for="genre">Game Genres</label>
+        <div class="genres-options">
+          <% genres.forEach(genre => { %>
+            <% if (typeof game !== 'undefined' && game.genre.some(gameGenre=> gameGenre._id == genre._id)) {%>
+              <label class="container"><%= genre.name %>   
+                <input type="checkbox" name='genre', id=<%=genre._id%>, value=<%=genre._id%> checked>
+                <span class="checkmark"></span>
+              </label>
+            <% } else { %>
+              <label class="container"><%= genre.name %>   
+                <input type="checkbox" name='genre', id=<%=genre._id%>, value=<%=genre._id%>>
+                <span class="checkmark"></span>
+              </label>
+            <% } %>  
+          <% }) %> 
+        </div>
+        
+        <label for="price">Game Price</label>
+        <input 
+        type="number"
+        step="0.01"
+        id="price"
+        placeholder="Price (5.90 = $5.90)"
+        name="price"
+        required="true"
+        value=<%= (typeof game != 'undefined') ? game.price : "" %> 
+        >
+        
+        <label for="stock">Game Stock</label>
+        <input 
+        type="number"
+        id="stock"
+        placeholder="Number in stock (e.g. 500)"
+        name="stock"
+        required="true"
+        value=<%= (typeof game != 'undefined') ? game.inStock : "" %>
+        >
+        
+        <% if (type == 'update') { %>
+          <label for="password">Admin password is needed to update game info</label>
+          <input type="password" name="password" id="password" placeholder="Please enter the password">
+          <input type="hidden" name="gameid" required="true" value=<%= game._id %>>
+        <% } %>
+        
+        <label for="game_image">Game Image</label>
+        <input 
+        type="file"
+        id="game_image"
+        name="game_image"
+        >
+        <button class="btn" type="submit">Sumbit</button>
+      </form>
+    </div>
+    
+    <div class="errors-list">
+      <% if (typeof errors != 'undefined') { %>
+        <ul class="">
+          <% errors.forEach(error => { %>
+            <li><h2><%= error.msg %></h2></li>
+            <% }); %>
+          </ul>
+          <% } %> 
+          
+      <% if (typeof error != 'undefined') { %>
+        <ul class="">
+          <li><h2><%= error%></h2></li>
+        </ul>
+        <% } %>
+
+      <% if (typeof msg != 'undefined') { %>
+        <ul class="">
+          <li><h2><%= msg%></h2></li>
+        </ul>
+        <% } %>
+    </div>
+  </div>
+</main>
