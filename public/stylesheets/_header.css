@@ -69,6 +69,13 @@ nav {
   box-shadow: inset 0 5px #ea3b50;
 }
 
+.username {
+  color: white;
+  font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+  letter-spacing: 3px;
+  margin-bottom: -10px;
+}
+
 .slide {
   clear: both;
   width: 100%;

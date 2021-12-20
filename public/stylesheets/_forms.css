@@ -32,6 +32,19 @@
   margin: 20px;
 }
 
+.forms h3 {
+  font-size: 1.2rem;
+  font-family: "Comfortaa", Helvetica, sans-serif;
+}
+
+.forms a {
+  color: #2196F3;
+}
+
+.forms a:hover {
+  text-decoration: underline;
+}
+
 .formDiv textarea {
   height: 250px;
 }
