@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
+const authController = require('../controllers/authController');
 const game_controller = require('../controllers/gameController');
 const developer_controller = require('../controllers/developerController');
 const genre_controller = require('../controllers/genreController');
@@ -9,6 +10,13 @@ const genre_controller = require('../controllers/genreController');
 router.get('/', function (req, res) {
   res.render('index', { title: 'Homepage' });
 });
+
+// Authentication routes
+router.get('/sign-up', authController.sign_up_get);
+router.post('/sign-up', authController.sign_up_post);
+router.get('/log-in', authController.log_in_get);
+router.post('/log-in', authController.log_in_post);
+router.get('/log-out', authController.log_out_get);
 
 /* GAME ROUTES */
 router.get('/game/create', game_controller.game_create_get);
