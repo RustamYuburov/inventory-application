@@ -1,6 +1,7 @@
 # Games Warehouse | Inventory Application
 
-A backend focused Game store app that allows users to add new developers, add new games to the database, and to add new games genres. Genres, developers, and games will all be able to be created, read, updated, or deleted from the database.
+A backend focused Game store app that allows users to add new developers, add new games to the database, and to add new games genres. Genres, developers, and games will all be able to be created, read, updated, or deleted from the database.<br />
+Also app has authentication features. Users can create new accounts and log in with them.<br />
 It was very challenging to put it all together. Also one of the problem was implementing add image feature. But with help of google and stackoverflow project was complete.
 
 > - [Live Demo](https://radiant-coast-44842.herokuapp.com/)
