@@ -19,9 +19,17 @@
   </div>
 
   <div class='sign-up'>
-    <ul>
-      <li><a href='#'>Log in</a></li>
-      <li><a href='#'>Sign up</a></li>
-    </ul>
+    <% if (!locals.currentUser) { %>
+      <ul>
+        <li><a href='/log-in'>Log in</a></li>
+        <li><a href='/sign-up'>Sign up</a></li>
+      </ul>
+      <% } else { %>
+      <ul>
+        <li><h2 class="username"><%= currentUser.username %></h2></li>
+        <li><a href="/log-out">Log out</a></li>
+      </ul>
+      <% } %>
+
   </div>
 </header>
