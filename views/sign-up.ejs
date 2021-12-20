@@ -1,0 +1,38 @@
+<main>
+  <div class="forms">
+    
+    <h1>Sign Up</h1>
+    <h3>Already registered? <a href="/log-in">Log in</a></h3>
+
+    <div class="formDiv">
+
+      <form action="" method="POST">
+    
+        <label for="username">Username</label>
+        <input name="username" placeholder="Please enter username" type="text" />
+        <label for="password">Password</label>
+        <input name="password" placeholder="Please enter password" type="password" />
+        <label for="confirmPassword">Confirm Password</label>
+        <input name="confirmPassword" placeholder="Please confirm password" type="password" />
+       
+        <button class="btn">Sign Up</button>
+      </form>
+    </div>
+    
+    <div class="errors-list">
+      <% if (typeof errors != 'undefined') { %>
+        <ul class="">
+          <% errors.forEach(error => { %>
+            <li><h2><%= error.msg %></h2></li>
+            <% }); %>
+          </ul>
+          <% } %> 
+  
+      <% if (typeof msg != 'undefined') { %>
+        <ul class="">
+          <li><h2><%= msg%></h2></li>
+        </ul>
+        <% } %>
+    </div>
+  </div>
+</main>
