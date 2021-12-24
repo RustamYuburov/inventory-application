@@ -16,6 +16,7 @@ It was very challenging to put it all together. Also one of the problem was impl
 - [EJS view engine](https://ejs.co/)
 - [Multer](https://www.npmjs.com/package/multer)
 - [Async](caolan.github.io/async/)
+- [Passport.js](http://www.passportjs.org/) - Authentication using session
 - [Heroku](https://www.heroku.com/) - Hosting
 
 ### Admin Password:
